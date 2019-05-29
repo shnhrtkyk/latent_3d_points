@@ -193,7 +193,7 @@ class PointCloudDataSet(object):
         if self.noisy_point_clouds is not None:
             self.noisy_point_clouds = self.noisy_point_clouds[perm]
         return self
-
+    #その都度HDDから読み込むように書き換えたい
     def next_batch(self, batch_size, seed=None):
         '''Return the next batch_size examples from this data set.
         '''
