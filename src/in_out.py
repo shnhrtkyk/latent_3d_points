@@ -138,12 +138,12 @@ def load_point_clouds_from_filenames(file_names, n_threads, loader, verbose=Fals
 
     return pclouds, model_names, class_ids
 
-
+#
 class PointCloudDataSet(object):
     '''
     See https://github.com/tensorflow/tensorflow/blob/a5d8217c4ed90041bea2616c14a8ddcf11ec8c03/tensorflow/examples/tutorials/mnist/input_data.py
     '''
-
+    #file path一覧のリストを受け取って、バッチごとに返すようにしたい。
     def __init__(self, point_clouds, noise=None, labels=None, copy=True, init_shuffle=True):
         '''Construct a DataSet.
         Args:
