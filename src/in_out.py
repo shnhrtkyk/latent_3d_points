@@ -118,6 +118,7 @@ def load_all_point_clouds_under_folder(top_dir, n_threads=20, file_ending='.ply'
 
 def load_point_clouds_from_filenames(file_names, n_threads, loader, verbose=False):
     pc = loader(file_names[0])[0]
+    #ここで全部の配列を作らないようにする
     pclouds = np.empty([len(file_names), pc.shape[0], pc.shape[1]], dtype=np.float32)
     model_names = np.empty([len(file_names)], dtype=object)
     class_ids = np.empty([len(file_names)], dtype=object)
